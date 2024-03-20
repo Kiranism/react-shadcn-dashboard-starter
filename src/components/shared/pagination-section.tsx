@@ -22,7 +22,7 @@ export default function PaginationSection({
   currentPage,
   setCurrentPage
 }: TPaginationSectionProps) {
-  const pageNumbers = [];
+  const pageNumbers: number[] = [];
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
