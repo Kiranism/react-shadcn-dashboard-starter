@@ -1,6 +1,6 @@
 export default function CountCard() {
   return (
-    <div className="flex w-full flex-col rounded-3xl bg-white shadow-xl md:w-1/2 xl:m-7">
+    <div className="flex w-full flex-col rounded-3xl bg-background shadow-xl md:w-1/2 xl:m-7">
       <h1 className="p-5 text-xl font-extrabold">Count</h1>
       <div className="m-3 flex flex-wrap justify-around gap-4 md:flex-nowrap">
         <div className="w-full rounded-2xl border-b-4 border-lime-500 bg-secondary p-4 shadow-xl md:w-1/3">

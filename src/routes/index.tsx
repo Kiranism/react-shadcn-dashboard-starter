@@ -1,10 +1,16 @@
-import DashboardLayout from '@/components/layout/dashboard-layout';
-import SignInPage from '@/pages/auth/signin';
-import DashboardPage from '@/pages/dashboard';
-import StudentPage from '@/pages/students';
-import StudentDetailPage from '@/pages/students/StudentDetailPage';
-import { Suspense } from 'react';
+import NotFound from '@/pages/not-found';
+import { Suspense, lazy } from 'react';
 import { Navigate, Outlet, useRoutes } from 'react-router-dom';
+
+const DashboardLayout = lazy(
+  () => import('@/components/layout/dashboard-layout')
+);
+const SignInPage = lazy(() => import('@/pages/auth/signin'));
+const DashboardPage = lazy(() => import('@/pages/dashboard'));
+const StudentPage = lazy(() => import('@/pages/students'));
+const StudentDetailPage = lazy(
+  () => import('@/pages/students/StudentDetailPage')
+);
 
 // ----------------------------------------------------------------------
 
@@ -41,6 +47,10 @@ export default function AppRouter() {
       path: '/login',
       element: <SignInPage />,
       index: true
+    },
+    {
+      path: '/404',
+      element: <NotFound />
     },
     {
       path: '*',

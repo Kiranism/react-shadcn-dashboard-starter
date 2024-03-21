@@ -11,7 +11,7 @@ const COLORS = ['#EC4D61', '#84BD47'];
 
 const Reward = () => {
   return (
-    <div className="mt-7 flex w-full flex-col rounded-3xl bg-white shadow-xl xl:m-7 xl:mt-0 xl:w-1/2">
+    <div className="mt-7 flex w-full flex-col rounded-3xl bg-background shadow-xl xl:m-7 xl:mt-0 xl:w-1/2">
       <h1 className="p-5 text-xl font-extrabold">Reward</h1>
       <div
         style={{ height: 300 }}

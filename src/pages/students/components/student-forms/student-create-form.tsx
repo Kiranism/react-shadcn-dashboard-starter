@@ -96,7 +96,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your firstname"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -112,7 +112,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your lastname"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -128,7 +128,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your username"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -144,7 +144,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your school"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -160,7 +160,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your email"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -176,7 +176,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your phone"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -194,7 +194,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your password"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />
@@ -210,7 +210,7 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
                     <Input
                       placeholder="Enter your confirmPassword"
                       {...field}
-                      className="border-none px-4 py-6 shadow-inner drop-shadow-xl"
+                      className=" px-4 py-6 shadow-inner drop-shadow-xl"
                     />
                   </FormControl>
                   <FormMessage />

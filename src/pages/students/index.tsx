@@ -29,7 +29,7 @@ export default function StudentPage() {
 
   return (
     <div className="p-5">
-      <PageHead title="Student Management | Kutubi" />
+      <PageHead title="Student Management | App" />
       <StudentsTable
         users={users}
         page={page}

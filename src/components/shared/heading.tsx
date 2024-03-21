@@ -11,7 +11,7 @@ export default function Heading({
 }: THeadingProps) {
   return (
     <div className={className}>
-      <h2 className="text-3xl font-bold tracking-tight text-primary">
+      <h2 className="text-xl font-bold tracking-tight text-primary sm:text-3xl">
         {title}
       </h2>
       <p className="text-sm text-muted-foreground">{description}</p>

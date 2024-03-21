@@ -17,7 +17,11 @@ export default function PopupModal({ renderModal }: TPopupModalProps) {
       <Button className="text-xs md:text-sm" onClick={() => setIsOpen(true)}>
         <Plus className="mr-2 h-4 w-4" /> Add New
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose} className={'!bg-white !px-1'}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        className={'!bg-background !px-1'}
+      >
         <ScrollArea className="h-[80dvh] px-6  ">
           {renderModal(onClose)}
         </ScrollArea>
