@@ -21,7 +21,7 @@ export default function MobileSidebar({
         {/* <SheetTrigger asChild>
           <MenuIcon />
         </SheetTrigger> */}
-        <SheetContent side="left" className="bg-primary !px-0">
+        <SheetContent side="left" className="bg-background !px-0">
           <div className="space-y-4 py-4">
             <div className="space-y-4 px-3 py-2">
               <Link to="/" className="py-2 text-2xl font-bold text-white ">

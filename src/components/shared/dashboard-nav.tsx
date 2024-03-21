@@ -30,8 +30,8 @@ const DashboardNavItem = ({ item, setOpen }: DashboardNavItemProps) => {
       <NavLink
         className={({ isActive }) =>
           cn(
-            'flex transform items-center rounded-full px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-50 hover:text-primary',
-            isActive && 'bg-gray-50 text-primary'
+            'flex transform items-center rounded-full px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-50 hover:text-primary hover:dark:text-black ',
+            isActive && 'bg-gray-50 text-primary dark:text-black'
           )
         }
         to={item.href}
