@@ -11,13 +11,10 @@ const InterestChannel = ({ title }: { title: string }) => {
   const pageLimit = 6;
   const country = searchParams.get('search') || null;
   const offset = (currentPage - 1) * pageLimit;
-  const { data, isLoading } = useGetStudents(offset, pageLimit, country);
+  const { data } = useGetStudents(offset, pageLimit, country);
   const users = data?.users;
   console.log('users', users);
   const totalUsers = data?.total_users; //1000
-  const pageCount = Math.ceil(totalUsers / pageLimit);
-  // Array to hold 7 items for repetition
-  const repeatItems = Array.from({ length: 7 }, (_, index) => index);
 
   return (
     <div className="flex w-full flex-col rounded-t-3xl bg-background shadow-xl xl:m-7 ">

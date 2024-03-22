@@ -1,7 +1,6 @@
 import DashboardNav from '@/components/shared/dashboard-nav';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent } from '@/components/ui/sheet';
 import { navItems } from '@/constants/data';
-import { MenuIcon } from 'lucide-react';
 import { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,16 +10,12 @@ type TMobileSidebarProps = {
   sidebarOpen: boolean;
 };
 export default function MobileSidebar({
-  className,
   setSidebarOpen,
   sidebarOpen
 }: TMobileSidebarProps) {
   return (
     <>
       <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
-        {/* <SheetTrigger asChild>
-          <MenuIcon />
-        </SheetTrigger> */}
         <SheetContent side="left" className="bg-background !px-0">
           <div className="space-y-4 py-4">
             <div className="space-y-4 px-3 py-2">
