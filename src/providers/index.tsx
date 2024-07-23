@@ -7,6 +7,7 @@ import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from './theme-provider';
+import { SidebarProvider } from '@/hooks/use-sidebar';
 
 export const queryClient = new QueryClient();
 
@@ -43,7 +44,7 @@ export default function AppProvider({
             <QueryClientProvider client={queryClient}>
               <ReactQueryDevtools />
               <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-                {children}
+                <SidebarProvider>{children}</SidebarProvider>
               </ThemeProvider>
             </QueryClientProvider>
           </ErrorBoundary>

@@ -12,7 +12,6 @@ import {
   TabsList,
   TabsTrigger
 } from '@/components/ui/tabs.js';
-import Overview from './components/overview.js';
 import RecentSales from './components/recent-sales.js';
 
 export default function DashboardPage() {
@@ -141,9 +140,7 @@ export default function DashboardPage() {
                 <CardHeader>
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
-                <CardContent className="pl-2">
-                  <Overview />
-                </CardContent>
+                <CardContent className="pl-2">{/* <Overview /> */}</CardContent>
               </Card>
               <Card className="col-span-4 md:col-span-3">
                 <CardHeader>

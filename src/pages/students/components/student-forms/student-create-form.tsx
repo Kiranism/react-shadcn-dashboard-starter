@@ -1,4 +1,3 @@
-import FileUpload from '@/components/shared/fileupload';
 import Heading from '@/components/shared/heading';
 import { Button } from '@/components/ui/button';
 import {
@@ -6,38 +5,27 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png'];
-const maxFileSize = 1 * 1024 * 1024 * 1024;
+
 const studentFormSchema = z
   .object({
-    firstname: z.string().min(1, { message: 'firstname is required' }),
+    firstname: z
+      .string({ required_error: 'First name is required' })
+      .min(1, { message: 'firstname is should be at least 1 character' }),
     lastname: z.string().min(1, { message: 'lastname is required' }),
     username: z.string().min(1, { message: 'username is required' }),
     school: z.string().min(1, { message: 'school is required' }),
     email: z.string().email({ message: 'Enter a valid email address' }),
-    phone: z.string().email({ message: 'Enter a valid phone number' }),
+    phone: z.string().min(1, { message: 'Enter a valid phone number' }),
     password: z.string().min(1, { message: 'Password is required' }),
     confirmPassword: z
       .string()
-      .min(1, { message: 'Confirm Password is required' }),
-    file: z
-      .custom()
-      .refine((fileList: any) => fileList?.length === 1, 'Expected file')
-      .transform((file: any) => file[0])
-      .refine((file) => {
-        return file?.size <= maxFileSize;
-      }, `File size should be less than 1gb.`)
-      .refine(
-        (file) => ACCEPTED_IMAGE_TYPES.includes(file?.type),
-        'Only these types are allowed .jpg, .jpeg, .png, .webp and mp4'
-      )
+      .min(1, { message: 'Confirm Password is required' })
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: 'Passwords must match',
@@ -60,32 +48,21 @@ const StudentCreateForm = ({ modalClose }: { modalClose: () => void }) => {
 
   return (
     <div className="px-2">
-      <div className="flex items-center justify-center text-2xl font-bold">
+      {/* <div className="flex items-center justify-center text-2xl font-bold">
         {'<Logo/>'}
-      </div>
+      </div> */}
 
       <Heading
         title={'Create New Student'}
-        description={
-          "Welcome to the Student creation page! By filling out the form below, you're taking the first step in empowering individuals with administrative responsibilities on the Kutubi platform."
-        }
+        description={''}
         className="space-y-2 py-4 text-center"
       />
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="file"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Profile</FormLabel>
-                <FormControl>
-                  <FileUpload onChange={field.onChange} value={field.value} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-4"
+          autoComplete="off"
+        >
           <div className="grid grid-cols-2 gap-x-8 gap-y-4">
             <FormField
               control={form.control}
