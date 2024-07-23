@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function RecentSales() {
   return (
-    <div className="space-y-8 overflow-scroll">
+    <div className="space-y-8 overflow-auto">
       <div className="flex items-center">
         <Avatar className="h-9 w-9">
           <AvatarImage src="/avatars/01.png" alt="Avatar" />
